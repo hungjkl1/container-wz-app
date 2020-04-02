@@ -4,15 +4,10 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "waza-app",
-        "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "uri": "mongodb+srv://HUNG:26t5DdTSxHjFnh9@cluster0-dacss.mongodb.net/test?retryWrites=true&w=majority"
       },
       "options": {
-        "authenticationDatabase": ""
+        "ssl": true
       }
     }
   }

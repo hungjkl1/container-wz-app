@@ -1,7 +1,7 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "Post",
+  "collectionName": "post",
   "info": {
     "name": "post"
   },

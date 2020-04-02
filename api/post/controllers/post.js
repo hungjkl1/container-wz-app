@@ -6,5 +6,7 @@
  */
 
 module.exports = {
-    
+    index: async ctx => {
+        ctx.send('Hello World!');
+      },
 };
