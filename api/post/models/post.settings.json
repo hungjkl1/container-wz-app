@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "Post",
+  "info": {
+    "name": "post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "posts"
+    }
+  }
+}

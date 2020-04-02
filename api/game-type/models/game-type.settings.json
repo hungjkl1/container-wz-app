@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "game_types",
+  "info": {
+    "name": "gameType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "games": {
+      "via": "game_types",
+      "collection": "game"
+    }
+  }
+}

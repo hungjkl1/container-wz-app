@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "games",
+  "info": {
+    "name": "game"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "game_types": {
+      "collection": "game-type",
+      "via": "games",
+      "dominant": true
+    }
+  }
+}
