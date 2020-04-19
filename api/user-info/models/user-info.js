@@ -1,15 +1,13 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `game` model.
+ * Lifecycle callbacks for the `user-info` model.
  */
 
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
-  beforeSave: async (model, attrs, options) => {
-    console.log(model)
-  },
+  // beforeSave: async (model, attrs, options) => {},
 
   // After saving a value.
   // Fired after an `insert` or `update` query.

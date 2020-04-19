@@ -540,34 +540,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "integer"
-                },
-                "game_types": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           }
         }
       },
@@ -578,12 +550,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "games": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }

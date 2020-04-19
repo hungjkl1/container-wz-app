@@ -11,14 +11,11 @@
   },
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "string",
+      "required": "true"
     },
     "description": {
       "type": "richtext"
-    },
-    "games": {
-      "via": "game_types",
-      "collection": "game"
     }
   }
 }

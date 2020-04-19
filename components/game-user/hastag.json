@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "components_game_tag_hastags",
+  "info": {
+    "name": "hastag",
+    "icon": "grip-lines"
+  },
+  "options": {},
+  "attributes": {
+    "game_type": {
+      "model": "game-type"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

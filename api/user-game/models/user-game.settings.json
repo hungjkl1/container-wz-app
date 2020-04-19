@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "connection": "default",
+  "collectionName": "user_games",
+  "info": {
+    "name": "userGame"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "game": {
+      "model": "game"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

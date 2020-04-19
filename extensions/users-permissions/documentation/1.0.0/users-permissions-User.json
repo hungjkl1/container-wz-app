@@ -1248,28 +1248,25 @@
           "name": {
             "type": "string"
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "user": {
-                  "type": "string"
-                }
+          "user_info": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "fullName": {
+                "type": "string"
+              },
+              "playerRank": {
+                "type": "string"
+              },
+              "profilePicture": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
               }
             }
           }
@@ -1313,11 +1310,8 @@
           "name": {
             "type": "string"
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "user_info": {
+            "type": "string"
           }
         }
       }

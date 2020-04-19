@@ -572,17 +572,16 @@
               "name": {
                 "type": "string"
               },
-              "posts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "user_info": {
+                "type": "string"
               }
             }
           },
           "post": {
             "required": [
-              "id"
+              "id",
+              "title",
+              "content"
             ],
             "properties": {
               "id": {
@@ -596,9 +595,6 @@
               },
               "active": {
                 "type": "boolean"
-              },
-              "user": {
-                "type": "string"
               }
             }
           },

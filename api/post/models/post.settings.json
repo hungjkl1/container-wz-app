@@ -11,18 +11,18 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "max": 200
     },
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true,
+      "max": 500
     },
     "active": {
-      "type": "boolean"
-    },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "posts"
+      "type": "boolean",
+      "default": true
     }
   }
 }

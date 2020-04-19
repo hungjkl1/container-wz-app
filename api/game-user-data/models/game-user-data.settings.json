@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "game_user_data",
+  "info": {
+    "name": " gameUserData"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "playedTime": {
+      "type": "integer"
+    },
+    "score": {
+      "type": "biginteger"
+    },
+    "lastPlayed": {
+      "type": "datetime"
+    },
+    "game": {
+      "unique": true,
+      "model": "game"
+    },
+    "user": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

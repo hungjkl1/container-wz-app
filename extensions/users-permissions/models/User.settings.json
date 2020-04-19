@@ -57,9 +57,9 @@
     "name": {
       "type": "string"
     },
-    "posts": {
+    "user_info": {
       "via": "user",
-      "collection": "post"
+      "model": "user-info"
     }
   }
 }

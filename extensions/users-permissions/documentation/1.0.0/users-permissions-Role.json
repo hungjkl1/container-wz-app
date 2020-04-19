@@ -612,11 +612,8 @@
                 "name": {
                   "type": "string"
                 },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "user_info": {
+                  "type": "string"
                 }
               }
             }

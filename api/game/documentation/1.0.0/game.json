@@ -532,27 +532,18 @@
             "type": "integer"
           },
           "game_types": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "games": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
               }
             }
           }
@@ -570,10 +561,7 @@
             "type": "integer"
           },
           "game_types": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "string"
           }
         }
       }

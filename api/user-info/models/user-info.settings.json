@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "user_infos",
+  "info": {
+    "name": "userInfo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "playerRank": {
+      "type": "enumeration",
+      "enum": [
+        "bronze",
+        "silver",
+        "gold",
+        "platium",
+        "diamond"
+      ]
+    },
+    "profilePicture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_info"
+    }
+  }
+}

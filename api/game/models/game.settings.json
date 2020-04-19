@@ -11,7 +11,8 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "url": {
       "type": "string"
@@ -21,8 +22,7 @@
     },
     "game_types": {
       "collection": "game-type",
-      "via": "games",
-      "dominant": true
+      "required": true
     }
   }
 }
