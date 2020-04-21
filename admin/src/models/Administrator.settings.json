@@ -1,13 +1,9 @@
 {
-  "kind": "collectionType",
   "connection": "default",
-  "collectionName": "users-permissions_user",
+  "collectionName": "strapi_administrator",
   "info": {
-    "name": "user",
+    "name": "Administrator",
     "description": ""
-  },
-  "options": {
-    "timestamps": true
   },
   "attributes": {
     "username": {
@@ -23,43 +19,30 @@
       "configurable": false,
       "required": true
     },
-    "provider": {
-      "type": "string",
-      "configurable": false
-    },
     "password": {
       "type": "password",
       "minLength": 6,
       "configurable": false,
-      "private": true
+      "private": true,
+      "required": true
     },
     "resetPasswordToken": {
       "type": "string",
       "configurable": false,
       "private": true
     },
-    "confirmed": {
-      "type": "boolean",
-      "default": false,
-      "configurable": false
-    },
     "blocked": {
       "type": "boolean",
       "default": false,
       "configurable": false
     },
-    "role": {
-      "model": "role",
-      "via": "users",
-      "plugin": "users-permissions",
-      "configurable": false
-    },
-    "name": {
-      "type": "string"
-    },
-    "user_info": {
-      "model": "user-info",
-      "via": "user"
+    "admin_layout": {
+      "type": "enumeration",
+      "default": "moderator",
+      "enum": [
+        "admin",
+        "moderator"
+      ]
     }
   }
 }

@@ -325,7 +325,9 @@
           },
           "game": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "game_types"
             ],
             "properties": {
               "id": {

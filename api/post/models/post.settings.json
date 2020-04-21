@@ -23,6 +23,12 @@
     "active": {
       "type": "boolean",
       "default": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }

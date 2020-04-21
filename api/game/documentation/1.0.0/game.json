@@ -516,7 +516,9 @@
     "schemas": {
       "Game": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "game_types"
         ],
         "properties": {
           "id": {
@@ -533,7 +535,8 @@
           },
           "game_types": {
             "required": [
-              "id"
+              "id",
+              "Name"
             ],
             "properties": {
               "id": {
@@ -550,6 +553,10 @@
         }
       },
       "NewGame": {
+        "required": [
+          "name",
+          "game_types"
+        ],
         "properties": {
           "name": {
             "type": "string"

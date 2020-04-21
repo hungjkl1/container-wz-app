@@ -540,6 +540,7 @@
           },
           "playerRank": {
             "type": "string",
+            "default": "bronze",
             "enum": [
               "bronze",
               "silver",
@@ -645,6 +646,7 @@
           },
           "playerRank": {
             "type": "string",
+            "default": "bronze",
             "enum": [
               "bronze",
               "silver",

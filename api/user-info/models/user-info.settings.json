@@ -15,6 +15,7 @@
     },
     "playerRank": {
       "type": "enumeration",
+      "default": "bronze",
       "enum": [
         "bronze",
         "silver",
@@ -30,9 +31,9 @@
       "required": false
     },
     "user": {
+      "via": "user_info",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "user_info"
+      "model": "user"
     }
   }
 }

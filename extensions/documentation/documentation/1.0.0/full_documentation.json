@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/16/2020 9:14:22 PM"
+    "x-generation-date": "04/21/2020 8:52:51 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5735,7 +5735,9 @@
           },
           "game": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "game_types"
             ],
             "properties": {
               "id": {
@@ -5820,7 +5822,9 @@
       },
       "Game": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "game_types"
         ],
         "properties": {
           "id": {
@@ -5837,7 +5841,8 @@
           },
           "game_types": {
             "required": [
-              "id"
+              "id",
+              "Name"
             ],
             "properties": {
               "id": {
@@ -5854,6 +5859,10 @@
         }
       },
       "NewGame": {
+        "required": [
+          "name",
+          "game_types"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -5937,6 +5946,9 @@
               },
               "active": {
                 "type": "boolean"
+              },
+              "cover": {
+                "type": "string"
               }
             }
           },
@@ -5977,6 +5989,52 @@
           "active": {
             "type": "boolean",
             "default": true
+          },
+          "cover": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -6008,7 +6066,9 @@
           },
           "game": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "game_types"
             ],
             "properties": {
               "id": {
@@ -6095,6 +6155,7 @@
           },
           "playerRank": {
             "type": "string",
+            "default": "bronze",
             "enum": [
               "bronze",
               "silver",
@@ -6200,6 +6261,7 @@
           },
           "playerRank": {
             "type": "string",
+            "default": "bronze",
             "enum": [
               "bronze",
               "silver",
