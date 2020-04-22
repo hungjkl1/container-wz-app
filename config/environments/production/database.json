@@ -4,7 +4,7 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "uri": "mongodb+srv://HUNG:26t5DdTSxHjFnh9@cluster0-dacss.mongodb.net/test?retryWrites=true&w=majority"
+        "uri": "${process.env.DATABASE_URI}"
       },
       "options": {
         "ssl": true
