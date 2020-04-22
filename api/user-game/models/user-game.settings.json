@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "user_games",
   "info": {
-    "name": "userGame"
+    "name": "userGames"
   },
   "options": {
     "increments": true,

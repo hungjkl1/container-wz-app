@@ -346,6 +346,9 @@
               "description": {
                 "type": "string"
               },
+              "cover": {
+                "type": "string"
+              },
               "game_types": {
                 "type": "string"
               }
