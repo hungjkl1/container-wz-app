@@ -18,7 +18,7 @@
     "content": {
       "type": "richtext",
       "required": true,
-      "max": 500
+      "max": 5000
     },
     "active": {
       "type": "boolean",
@@ -29,6 +29,10 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

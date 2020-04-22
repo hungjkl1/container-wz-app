@@ -47,15 +47,6 @@
       "config": {
         "policies": []
       }
-    },
-    {
-      "method": "GET",
-      "path": "/posts/famous",
-      "handler": "post.index",
-      "config": {
-        "policies": []
-      }
     }
-
   ]
 }

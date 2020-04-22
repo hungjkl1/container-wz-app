@@ -598,6 +598,9 @@
               },
               "cover": {
                 "type": "string"
+              },
+              "views": {
+                "type": "integer"
               }
             }
           },

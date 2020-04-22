@@ -10,47 +10,9 @@ import { get, upperFirst } from 'lodash';
 import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
 import useFetch from './hooks';
+import Logo from '../../assets/images/dsad.png';
+import MyChart from './PostView'
 
-const FIRST_BLOCK_LINKS = [
-  {
-    link:
-      'https://strapi.io/documentation/3.0.0-beta.x/getting-started/quick-start.html#_4-create-a-new-content-type',
-    contentId: 'app.components.BlockLink.documentation.content',
-    titleId: 'app.components.BlockLink.documentation',
-  },
-  {
-    link: 'https://github.com/strapi/foodadvisor',
-    contentId: 'app.components.BlockLink.code.content',
-    titleId: 'app.components.BlockLink.code',
-  },
-];
-
-const SOCIAL_LINKS = [
-  {
-    name: 'GitHub',
-    link: 'https://github.com/strapi/strapi/',
-  },
-  {
-    name: 'Slack',
-    link: 'https://slack.strapi.io/',
-  },
-  {
-    name: 'Medium',
-    link: 'https://medium.com/@strapi',
-  },
-  {
-    name: 'Twitter',
-    link: 'https://twitter.com/strapijs',
-  },
-  {
-    name: 'Reddit',
-    link: 'https://www.reddit.com/r/Strapi/',
-  },
-  {
-    name: 'Stack Overflow',
-    link: 'https://stackoverflow.com/questions/tagged/strapi',
-  },
-];
 
 const HomePage = ({ global: { plugins }, history: { push } }) => {
   const { error, isLoading, posts } = useFetch();
@@ -90,6 +52,22 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
       <FormattedMessage id="HomePage.helmet.title">
         {title => <PageTitle title={title} />}
       </FormattedMessage>
+      <div style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
+        alignItems: "center",
+        flexDirection: "column"
+      }}>
+        <img 
+        src={Logo}
+        style={{
+        width: "200px"
+        }}
+        />
+        <MyChart />
+      </div>
     </>
   );
 };

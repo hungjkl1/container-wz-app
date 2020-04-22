@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/newUsersData",
+      "handler": "user-info.findAnewUsersData",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/user-infos",
       "handler": "user-info.find",
       "config": {

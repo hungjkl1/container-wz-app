@@ -518,6 +518,7 @@
         "required": [
           "id",
           "name",
+          "description",
           "game_types"
         ],
         "properties": {
@@ -532,6 +533,9 @@
           },
           "price": {
             "type": "integer"
+          },
+          "description": {
+            "type": "string"
           },
           "game_types": {
             "required": [
@@ -555,6 +559,7 @@
       "NewGame": {
         "required": [
           "name",
+          "description",
           "game_types"
         ],
         "properties": {
@@ -566,6 +571,9 @@
           },
           "price": {
             "type": "integer"
+          },
+          "description": {
+            "type": "string"
           },
           "game_types": {
             "type": "string"

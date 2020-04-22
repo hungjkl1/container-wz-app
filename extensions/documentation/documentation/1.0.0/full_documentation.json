@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/21/2020 8:52:51 PM"
+    "x-generation-date": "04/22/2020 4:40:25 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2639,63 +2639,6 @@
         ]
       }
     },
-    "/posts/famous": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Post"
-        ],
-        "parameters": []
-      }
-    },
     "/user-game": {
       "get": {
         "deprecated": false,
@@ -3004,6 +2947,63 @@
         "summary": "",
         "tags": [
           "User-game"
+        ],
+        "parameters": []
+      }
+    },
+    "/newUsersData": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "User-info"
         ],
         "parameters": []
       }
@@ -5737,6 +5737,7 @@
             "required": [
               "id",
               "name",
+              "description",
               "game_types"
             ],
             "properties": {
@@ -5751,6 +5752,9 @@
               },
               "price": {
                 "type": "integer"
+              },
+              "description": {
+                "type": "string"
               },
               "game_types": {
                 "type": "string"
@@ -5824,6 +5828,7 @@
         "required": [
           "id",
           "name",
+          "description",
           "game_types"
         ],
         "properties": {
@@ -5838,6 +5843,9 @@
           },
           "price": {
             "type": "integer"
+          },
+          "description": {
+            "type": "string"
           },
           "game_types": {
             "required": [
@@ -5861,6 +5869,7 @@
       "NewGame": {
         "required": [
           "name",
+          "description",
           "game_types"
         ],
         "properties": {
@@ -5872,6 +5881,9 @@
           },
           "price": {
             "type": "integer"
+          },
+          "description": {
+            "type": "string"
           },
           "game_types": {
             "type": "string"
@@ -5949,6 +5961,9 @@
               },
               "cover": {
                 "type": "string"
+              },
+              "views": {
+                "type": "integer"
               }
             }
           },
@@ -6007,10 +6022,22 @@
               "name": {
                 "type": "string"
               },
-              "hash": {
+              "alternativeText": {
                 "type": "string"
               },
-              "sha256": {
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
                 "type": "string"
               },
               "ext": {
@@ -6025,6 +6052,9 @@
               "url": {
                 "type": "string"
               },
+              "previewUrl": {
+                "type": "string"
+              },
               "provider": {
                 "type": "string"
               },
@@ -6035,6 +6065,10 @@
                 "type": "string"
               }
             }
+          },
+          "views": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
@@ -6053,6 +6087,10 @@
           "active": {
             "type": "boolean",
             "default": true
+          },
+          "views": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
@@ -6068,6 +6106,7 @@
             "required": [
               "id",
               "name",
+              "description",
               "game_types"
             ],
             "properties": {
@@ -6082,6 +6121,9 @@
               },
               "price": {
                 "type": "integer"
+              },
+              "description": {
+                "type": "string"
               },
               "game_types": {
                 "type": "string"
@@ -6181,10 +6223,22 @@
               "name": {
                 "type": "string"
               },
-              "hash": {
+              "alternativeText": {
                 "type": "string"
               },
-              "sha256": {
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
                 "type": "string"
               },
               "ext": {
@@ -6197,6 +6251,9 @@
                 "type": "number"
               },
               "url": {
+                "type": "string"
+              },
+              "previewUrl": {
                 "type": "string"
               },
               "provider": {
